@@ -19,31 +19,32 @@ Parámetro	Descripción	Ejemplo
 
 > *01*: Cédula de Ciudadanía
 
-02: Tarjeta de Identidad
+> 02: Tarjeta de Identidad
 
-03: Cédula de Extranjería
+> 03: Cédula de Extranjería
 
-04: Registro Civil
+> 04: Registro Civil
 
-PS: Pasaporte
+> PS: Pasaporte
 
-NU: Número Único de Identidad Personal
+> NU: Número Único de Identidad Personal
 
-AI: Adulto Sin Identificación
+> AI: Adulto Sin Identificación
 
-MI: Menor Sin Identificación
+> MI: Menor Sin Identificación
 
-CD: Carnet Diplomático
+> CD: Carnet Diplomático
 
-NI: NIT
+> NI: NIT
 
 
 
-jor	Este parámetro define el tipo de consulta que se va a realizar, cada consulta tiene un código que le diferencia de otras.	jor=85423146,12549865
-klm	Este parámetro indica el número de documento que se va a consultar	klm=1111111
-lcy	Este parámetro define el nombre de usuario que va a hacer la consulta.	lcy=usuario
-thy	
-Es el país asociado a la consulta del documento, se utiliza la misma nomenclatura de 2 letras usada por el estándar ISO 3166. Para más referencia de los códigos de países, ver: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 Actualmente solamente soportado CO para Colombia y EC para Ecuador.
+**jor**	*Este parámetro define el tipo de consulta que se va a realizar, cada consulta tiene un código que le diferencia de otras.	jor=85423146,12549865*
 
-thy=co
-vpv	Este parámetro tiene la contraseña de usuario para poder autenticarse.	vpv=123456
+**klm**	*Este parámetro indica el número de documento que se va a consultar	klm=1111111*
+
+**lcy**	*Este parámetro define el nombre de usuario que va a hacer la consulta.	lcy=usuario*
+
+**thy** *Es el país asociado a la consulta del documento, se utiliza la misma nomenclatura de 2 letras usada por el estándar ISO 3166. Para más referencia de los códigos de países, ver: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 Actualmente solamente soportado CO para Colombia y EC para Ecuador. thy=co*
+
+**vpv**	*Este parámetro tiene la contraseña de usuario para poder autenticarse.	vpv=123456*
