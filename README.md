@@ -17,8 +17,8 @@ Parámetro	Descripción	Ejemplo
 
 ***Por ejemplo para Colombia es:***
 
-> 01: Cédula de Ciudadanía
-02: Tarjeta de Identidad
+> *01*: Cédula de Ciudadanía
+> 02: Tarjeta de Identidad
 03: Cédula de Extranjería
 04: Registro Civil
 PS: Pasaporte
