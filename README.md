@@ -9,11 +9,11 @@ Cada petición tiene unos datos de entrada que permiten diferenciar el tipo de c
 Parámetro	Descripción	Ejemplo
 -
 
-hgu	*Parámetro que permite asignar valores de fecha para aquellas consultas que lo requiera	hgu=2004-06-25*
+**hgu**	*Parámetro que permite asignar valores de fecha para aquellas consultas que lo requiera	hgu=2004-06-25*
 
-hho	*Parámetro para asignar valor de placa de vehículo para el caso de consulta del RUNT Placa. El valor no debe ir separado por ningún carácter ni por espacios	hho=vpx89c*
-icf	
-*Este parámetro define el tipo de documento que se va a consultar, y depende del país.*
+**hho**	*Parámetro para asignar valor de placa de vehículo para el caso de consulta del RUNT Placa. El valor no debe ir separado por ningún carácter ni por espacios	hho=vpx89c*
+
+**icf**	*Este parámetro define el tipo de documento que se va a consultar, y depende del país.*
 Por ejemplo para Colombia es:
 
 01: Cédula de Ciudadanía
