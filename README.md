@@ -13,21 +13,32 @@ Parámetro	Descripción	Ejemplo
 
 **hho**	*Parámetro para asignar valor de placa de vehículo para el caso de consulta del RUNT Placa. El valor no debe ir separado por ningún carácter ni por espacios	hho=vpx89c*
 
-**icf**	*Este parámetro define el tipo de documento que se va a consultar, y depende del país.*
+**icf**	*Este parámetro define el tipo de documento que se va a consultar, y depende del país. icf=01*
 
 ***Por ejemplo para Colombia es:***
 
 > *01*: Cédula de Ciudadanía
-> 02: Tarjeta de Identidad
+
+02: Tarjeta de Identidad
+
 03: Cédula de Extranjería
+
 04: Registro Civil
+
 PS: Pasaporte
+
 NU: Número Único de Identidad Personal
+
 AI: Adulto Sin Identificación
+
 MI: Menor Sin Identificación
+
 CD: Carnet Diplomático
+
 NI: NIT
-icf=01
+
+
+
 jor	Este parámetro define el tipo de consulta que se va a realizar, cada consulta tiene un código que le diferencia de otras.	jor=85423146,12549865
 klm	Este parámetro indica el número de documento que se va a consultar	klm=1111111
 lcy	Este parámetro define el nombre de usuario que va a hacer la consulta.	lcy=usuario
