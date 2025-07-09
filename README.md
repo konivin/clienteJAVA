@@ -1,50 +1,95 @@
-# clienteJAVA
-Ejemplo de consumo de web service Konivin con java
+# Build
+To build client application run
+````bash
+mvn clean package
+````
+# Run
+To run the konivin client:
 
-Parámetros de entrada del Web Service
---
+````bash
+java -jar target/konivin-shell-1.1.1.jar
+````
+# Client shell usage
+After running java command the program shows this prompt:
+````
+shell:>
+````
+# Shell Help command
+````
+shell:>help
+AVAILABLE COMMANDS
 
-Cada petición tiene unos datos de entrada que permiten diferenciar el tipo de consulta y el cliente que realiza la misma. Estos datos son obligatorios y permiten el retorno de una estructura tipo JSON para que sea interpretada por el cliente.
+Built-In Commands
+       help: Display help about available commands
+       stacktrace: Display the full stacktrace of the last error.
+       clear: Clear the shell screen.
+       quit, exit: Exit the shell.
+       history: Display or save the history of previously run commands
+       version: Show version info
+       script: Read and execute commands from a file.
 
-Parámetro	Descripción	Ejemplo
--
+Konivin Commands
+       consultar: Performs a query to the Konivin persons API.
+````
+# Consultar command help
+````
+shell:>help consultar
+NAME
+       consultar - Performs a query to the Konivin persons API.
 
-**hgu**	*Parámetro que permite asignar valores de fecha para aquellas consultas que lo requiera	hgu=2004-06-25*
+SYNOPSIS
+       consultar --lcy String --jor String --vpv String --icf String --thy String --klm String --hgu String --hho String --method String --server String --help
 
-**hho**	*Parámetro para asignar valor de placa de vehículo para el caso de consulta del RUNT Placa. El valor no debe ir separado por ningún carácter ni por espacios	hho=vpx89c*
+OPTIONS
+       --lcy String
+       Username performing the query.
+       [Optional]
 
-**icf**	*Este parámetro define el tipo de documento que se va a consultar, y depende del país. icf=01*
+       --jor String
+       Query codes, separated by commas.
+       [Optional]
 
-***Por ejemplo para Colombia es:***
+       --vpv String
+       User's password.
+       [Optional]
 
-> *01*: Cédula de Ciudadanía
+       --icf String
+       Document type (e.g., '01' for ID Card in Colombia).
+       [Optional]
 
-> 02: Tarjeta de Identidad
+       --thy String
+       Country of the query (ISO 3166-1 alpha-2, e.g., 'co').
+       [Optional]
 
-> 03: Cédula de Extranjería
+       --klm String
+       Document number to query.
+       [Optional]
 
-> 04: Registro Civil
+       --hgu String
+       Date for queries that require it (format:YYYY-MM-DD).
+       [Optional, default = 1900-01-01]
 
-> PS: Pasaporte
+       --hho String
+       6-character vehicle plate (no spaces or hyphens).
+       [Optional]
 
-> NU: Número Único de Identidad Personal
+       --method String
+       HTTP method to use (GET or POST).
+       [Optional, default = GET]
 
-> AI: Adulto Sin Identificación
+       --server String
+       Index of the server URL to query (provided by the Konivin team)
+       [Optional]
 
-> MI: Menor Sin Identificación
-
-> CD: Carnet Diplomático
-
-> NI: NIT
-
-
-
-**jor**	*Este parámetro define el tipo de consulta que se va a realizar, cada consulta tiene un código que le diferencia de otras.	jor=85423146,12549865*
-
-**klm**	*Este parámetro indica el número de documento que se va a consultar	klm=1111111*
-
-**lcy**	*Este parámetro define el nombre de usuario que va a hacer la consulta.	lcy=usuario*
-
-**thy** *Es el país asociado a la consulta del documento, se utiliza la misma nomenclatura de 2 letras usada por el estándar ISO 3166. Para más referencia de los códigos de países, ver: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 Actualmente solamente soportado CO para Colombia y EC para Ecuador. thy=co*
-
-**vpv**	*Este parámetro tiene la contraseña de usuario para poder autenticarse.	vpv=123456*
+       --help or -h
+       help for consultar
+       [Optional]
+````
+The explanation of each parameter can be found in:
+[Manual fuentes Konivin](https://produccion.konivin.com:28183/konivin/vs/documentacion/DetalleFuentes.xhtml)
+# Example consuming Konivin
+This is an example for consuming Konivin
+````
+consultar --lcy "${user}" --jor "23566548" --vpv "${password}" --icf "01" --thy "co" --klm "ND1098XX" --hho "123456" --servidor "${endpoint}" --metodo "GET"
+````
+Please replace the ${values} to real values provided by Konivin support team.
